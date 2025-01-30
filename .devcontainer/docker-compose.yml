@@ -1,0 +1,19 @@
+services:
+  zephyr-ide:
+    container_name: zephyr-devcontainer
+    image: zephyr-build:v3.7
+    build:
+      dockerfile: Dockerfile.devel
+      context: zephyr-image
+      args:
+        UID: "${UID}"
+        GID: "${GID}"
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
+    volumes:
+      - ..:/workspace
+      - zephyr-sdk:/zephyr
+    entrypoint: ["tail", "-f", "/dev/null"]
+
+volumes:
+  zephyr-sdk:

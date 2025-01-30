@@ -1,0 +1,19 @@
+{
+	"name": "zephyr-ide",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "zephyr-ide",
+	"workspaceFolder": "/workspace",
+	"customizations": {
+		"vscode": {
+			"settings": {
+    			"terminal.integrated.defaultProfile.linux": "bash",
+				"terminal.integrated.shell.linux": "/bin/bash",
+				"zephyr-ide.tools_directory": "/zephyr"
+			},
+			"extensions": [
+				"mylonics.zephyr-ide-extension-pack",
+				"ms-vscode.cpptools-extension-pack"
+			]
+		}
+	}
+}
