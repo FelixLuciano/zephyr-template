@@ -1,0 +1,3 @@
+[submodule ".devcontainer/docker-image"]
+	path = .devcontainer/docker-image
+	url = https://github.com/zephyrproject-rtos/docker-image.git
