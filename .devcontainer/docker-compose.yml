@@ -1,10 +1,10 @@
 services:
   zephyr-ide:
-    container_name: zephyr-devcontainer
+    container_name: zephyr-ide
     image: zephyr-build:v3.7
     build:
       dockerfile: Dockerfile.devel
-      context: zephyr-image
+      context: docker-image
       args:
         UID: "${UID}"
         GID: "${GID}"
